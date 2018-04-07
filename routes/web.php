@@ -51,6 +51,20 @@ Route::delete('/admin/user/{id}', 'Admin\UserController@destroy');
 Route::get('/admin/company', 'Admin\CompanyController@index');
 Route::post('/admin/company', 'Admin\CompanyController@update');
 
+Route::get('/admin/product', 'Admin\ProductController@index');
+Route::get('/admin/product/create', 'Admin\ProductController@create');
+Route::get('/admin/product/{id}', 'Admin\ProductController@edit');
+Route::post('/admin/product', 'Admin\ProductController@store');
+Route::put('/admin/product/{id}', 'Admin\ProductController@update');
+Route::delete('/admin/product/{id}', 'Admin\ProductController@destroy');
+
+Route::get('/admin/product_category', 'Admin\ProductCategoryController@index');
+Route::get('/admin/product_category/create', 'Admin\ProductCategoryController@create');
+Route::get('/admin/product_category/{id}', 'Admin\ProductCategoryController@edit');
+Route::post('/admin/product_category', 'Admin\ProductCategoryController@store');
+Route::put('/admin/product_category/{id}', 'Admin\ProductCategoryController@update');
+Route::delete('/admin/product_category/{id}', 'Admin\ProductCategoryController@destroy');
+
 Route::get('/', function(){
 	return view('front.company.contact');
 });

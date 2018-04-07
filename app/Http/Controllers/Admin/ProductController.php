@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Services\Admin\ProductService;
 use App\Http\Requests\Admin\ProductRequest;
 use App\Product;
+use App\ProductCategory;
 
 class ProductController extends BaseController
 {
@@ -29,11 +30,11 @@ class ProductController extends BaseController
     	return $this->_edit($id, ['booleanTexts'=>$this->model->booleanTexts, 'categories'=>$this->category->all()]);
     }
 
-    public function store(ProductCategoryRequest $request){
+    public function store(ProductRequest $request){
     	return $this->_store($request);
     }
 
-    public function update(ProductCategoryRequest $request, $id){
+    public function update(ProductRequest $request, $id){
     	return $this->_update($request, $id);
     }
 }

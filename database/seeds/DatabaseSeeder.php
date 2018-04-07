@@ -112,10 +112,27 @@ class MenusTableSeeder extends Seeder
             'menu_icon'=>'fa fa-circle-o', 'parent_id'=>12, 'sort'=>999, 'is_show'=>0]);
         Menu::create(['id'=>16,'menu_name'=>'系统信息', 'power_name'=>'index', 'menu_url'=>'/admin/system_info', 
             'menu_icon'=>'fa fa-info-circle', 'parent_id'=>11, 'sort'=>999, 'is_show'=>1]);
-
         Menu::create(['id'=>17,'menu_name'=>'公司信息', 'power_name'=>'index', 'menu_url'=>'/admin/company', 
             'menu_icon'=>'fa fa-briefcase', 'parent_id'=>0, 'sort'=>3, 'is_show'=>1]);
         Menu::create(['id'=>18,'menu_name'=>'修改公司信息', 'power_name'=>'edit', 'menu_url'=>'/admin/company/update', 
             'menu_icon'=>'fa fa-circle-o', 'parent_id'=>0, 'sort'=>3, 'is_show'=>0]);
+        Menu::create(['id'=>19,'menu_name'=>'产品中心', 'power_name'=>'index', 'menu_url'=>'/admin/product_center', 
+            'menu_icon'=>'fa fa-circle-o', 'parent_id'=>0, 'sort'=>4, 'is_show'=>1]);
+        Menu::create(['id'=>20,'menu_name'=>'产品管理', 'power_name'=>'index', 'menu_url'=>'/admin/product', 
+            'menu_icon'=>'fa fa-circle-o', 'parent_id'=>19, 'sort'=>4, 'is_show'=>1]);
+        Menu::create(['id'=>21,'menu_name'=>'添加产品', 'power_name'=>'add', 'menu_url'=>'/admin/product/create', 
+            'menu_icon'=>'fa fa-circle-o', 'parent_id'=>20, 'sort'=>4, 'is_show'=>0]);
+        Menu::create(['id'=>22,'menu_name'=>'编辑产品', 'power_name'=>'edit', 'menu_url'=>'/admin/product/{id}', 
+            'menu_icon'=>'fa fa-circle-o', 'parent_id'=>20, 'sort'=>4, 'is_show'=>0]);
+        Menu::create(['id'=>23,'menu_name'=>'删除产品', 'power_name'=>'delete', 'menu_url'=>'/admin/product/{id}/delete', 
+            'menu_icon'=>'fa fa-circle-o', 'parent_id'=>20, 'sort'=>4, 'is_show'=>0]);
+        Menu::create(['id'=>24,'menu_name'=>'产品分类管理', 'power_name'=>'index', 'menu_url'=>'/admin/product_category', 
+            'menu_icon'=>'fa fa-circle-o', 'parent_id'=>19, 'sort'=>4, 'is_show'=>1]);
+        Menu::create(['id'=>25,'menu_name'=>'添加产品分类', 'power_name'=>'add', 'menu_url'=>'/admin/product_category/create', 
+            'menu_icon'=>'fa fa-circle-o', 'parent_id'=>24, 'sort'=>4, 'is_show'=>0]);
+        Menu::create(['id'=>26,'menu_name'=>'编辑产品分类', 'power_name'=>'edit', 'menu_url'=>'/admin/product_category/{id}', 
+            'menu_icon'=>'fa fa-circle-o', 'parent_id'=>24, 'sort'=>4, 'is_show'=>0]);
+        Menu::create(['id'=>27,'menu_name'=>'删除产品分类', 'power_name'=>'delete', 'menu_url'=>'/admin/product_category/{id}/delete', 
+            'menu_icon'=>'fa fa-circle-o', 'parent_id'=>24, 'sort'=>4, 'is_show'=>0]);
     }
 }

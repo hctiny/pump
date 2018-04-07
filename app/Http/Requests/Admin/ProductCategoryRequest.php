@@ -23,14 +23,14 @@ class ProductCategoryRequest extends FormRequest
      */
     public function rules()
     {
-        $uniqueStr = 'unique:product_categories,name';
+        $uniqueStr = 'unique:product_categories,name,';
         
         if($this->id){
             $uniqueStr .= $this->id;
         }
 
         return [
-            'name'=>'require|'.$uniqueStr
+            'name'=>'required|'.$uniqueStr
         ];
     }
 
